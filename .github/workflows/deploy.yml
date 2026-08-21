@@ -1,0 +1,22 @@
+name: Deploy Slides
+on:
+  push:
+    branches:
+      - main # 當推送到 main 分支時觸發
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Dependencies
+        run: npm install
+      - name: Build Slides
+        run: npx slidev build slides.md --base /20260824-ICU-Meeting/
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
