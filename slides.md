@@ -96,6 +96,8 @@ layout: default
 transition: fade
 ---
 
+<div class="overflow-y-auto max-h-[460px] pr-2">
+
 # 研究方法 (Research Methodology)
 
 本研究是法國一項大型多中心前瞻性定量研究的**質性研究分支 (Qualitative Sub-study)**。
@@ -118,6 +120,63 @@ transition: fade
     <li>四步驟主題分析法：獨立編碼 → 建立編碼本 (Codebook) → 全面編碼 → 歸納法 (Inductive approach) 提煉主題。</li>
   </ul>
 </div>
+</div>
+
+<!-- 底部 PCL-5 量表簡介與範例展示區 (可向下捲動閱讀) -->
+<div class="mt-6 border-t border-blue-200 pt-4 bg-blue-50/60 rounded-xl p-4 text-sm shadow-sm">
+  <h3 class="font-semibold text-blue-900 text-base mb-2 flex items-center gap-2">📋 PCL-5 篩檢工具簡介 (PTSD Checklist for DSM-5)</h3>
+  <p class="text-gray-700 leading-relaxed mb-3">
+    <b>PCL-5</b> 為美國國家 PTSD 中心（VA National Center for PTSD）開發之 20 題自填式評估量表，完全對應 DSM-5 對創傷後壓力症候群之診斷標準。評估過去一個月中，ICU 創傷經歷引發之四大症狀群組（<b>B: 侵入性症狀</b>、<b>C: 迴避症狀</b>、<b>D: 認知與情緒負面改變</b>、<b>E: 警覺性與反應性增高</b>）。每題分數為 0（完全沒有）至 4（極度嚴重），總分 0–80 分，臨床顯著篩檢切點通常訂為 <b>31–33 分</b>。
+  </p>
+
+  <!-- PCL-5 核心架構示意圖 (Figure 1) -->
+  <div class="my-3 text-center">
+    <p class="text-xs font-bold text-gray-500 mb-1 font-mono">PCL-5 示意圖:</p>
+    
+  <img src="/components/PCL-5.png" class="rounded shadow-lg border border-gray-200" alt="PCL-5" />
+
+  </div>
+
+  <!-- 量表部分題目範例表 -->
+  <div class="my-3 bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
+    <p class="text-xs font-bold text-blue-900 mb-2 font-mono">PCL-5 評估量表題目內容範例 (Sample Items):</p>
+    <table class="w-full text-xs border-collapse border border-gray-200">
+      <thead>
+        <tr class="bg-blue-100/80 text-blue-900 font-bold">
+          <th class="border border-gray-200 p-1.5 text-left w-20">症狀群組</th>
+          <th class="border border-gray-200 p-1.5 text-left">評估問題項目 (評估過去一個月內的困擾程度 0 - 4 分)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
+        <tr>
+          <td class="border border-gray-200 p-1.5 font-semibold text-blue-800">B. 侵入性症狀</td>
+          <td class="border border-gray-200 p-1.5">反覆出現關於 ICU 創傷經歷的痛苦記憶、侵入性畫面或惡夢 (Flashbacks)</td>
+        </tr>
+        <tr class="bg-gray-50/60">
+          <td class="border border-gray-200 p-1.5 font-semibold text-blue-800">C. 迴避行為</td>
+          <td class="border border-gray-200 p-1.5">刻意迴避與 ICU 或重病相關的思考、感受、人物、地點或類似醫療環境</td>
+        </tr>
+        <tr>
+          <td class="border border-gray-200 p-1.5 font-semibold text-blue-800">D. 負面改變</td>
+          <td class="border border-gray-200 p-1.5">持續產生強烈的自責、罪惡感、麻木感，或對未來與他人產生疏離感</td>
+        </tr>
+        <tr class="bg-gray-50/60">
+          <td class="border border-gray-200 p-1.5 font-semibold text-blue-800">E. 過度警覺</td>
+          <td class="border border-gray-200 p-1.5">持續處於高度警覺狀態、易怒、驚跳反應、注意力不集中或嚴重失眠</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 中文超連結與資源指引 -->
+  <div class="mt-3 text-xs bg-white p-2.5 rounded border border-blue-200 flex items-center justify-between">
+    <span class="font-semibold text-gray-700">🔗 繁體中文參考資源與線上評估指引：</span>
+    <a href="https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline flex items-center gap-1">
+      點此前往《美國 VA PTSD 國家中心 ── PCL-5 量表專業指引與說明》 ↗
+    </a>
+  </div>
+</div>
+
 </div>
 
 ---

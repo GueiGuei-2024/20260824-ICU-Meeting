@@ -166,9 +166,13 @@ const initCanvas = () => {
 }
 
 const handleMouseMove = (e) => {
-  const rect = canvasRef.value.getBoundingClientRect()
-  mouse.x = e.clientX - rect.left
-  mouse.y = e.clientY - rect.top
+  const canvas = canvasRef.value
+  if (!canvas) return
+  const rect = canvas.getBoundingClientRect()
+  const scaleX = canvas.width / rect.width
+  const scaleY = canvas.height / rect.height
+  mouse.x = (e.clientX - rect.left) * scaleX
+  mouse.y = (e.clientY - rect.top) * scaleY
 }
 
 const handleMouseLeave = () => {
@@ -177,11 +181,13 @@ const handleMouseLeave = () => {
 }
 
 const handleTouchMove = (e) => {
-  if (e.touches.length > 0) {
-    const rect = canvasRef.value.getBoundingClientRect()
-    mouse.x = e.touches[0].clientX - rect.left
-    mouse.y = e.touches[0].clientY - rect.top
-  }
+  const canvas = canvasRef.value
+  if (!canvas || !e.touches.length) return
+  const rect = canvas.getBoundingClientRect()
+  const scaleX = canvas.width / rect.width
+  const scaleY = canvas.height / rect.height
+  mouse.x = (e.touches[0].clientX - rect.left) * scaleX
+  mouse.y = (e.touches[0].clientY - rect.top) * scaleY
 }
 
 const animate = () => {
