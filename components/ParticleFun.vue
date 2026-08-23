@@ -32,17 +32,19 @@ const canvasRef = ref(null)
 let ctx = null
 let animationFrameId = null
 let particles = []
+let resizeObserver = null
 
-// 滑鼠近接與大範圍光暈參數
+// 滑鼠近接與大範圍光暈參數 (保持與當前完全一致)
 const mouse = {
   x: -1000,
   y: -1000,
-  pushRadius: 75,    // 1. 滑鼠中間空白縮小至精緻的 75px
-  glowRadius: 450,   // 2. 光圈感應範圍更大 (450px)
-  coreRadius: 120    // 核心高亮區範圍
+  pushRadius: 75,    // 精緻小巧的 75px 滑鼠排斥區
+  glowRadius: 450,   // 大範圍光暈半徑 (450px)
+  coreRadius: 120    // 核心高亮區半徑
 }
 let time = 0
 
+// ProximityParticle 保持 100% 原汁原味粒子物理與特性
 class ProximityParticle {
   constructor(x, y, baseHue, totalWidth) {
     this.anchorX = x
@@ -57,7 +59,7 @@ class ProximityParticle {
     // 每個粒子獨立的極慢自主舞動相位與速度
     this.phaseX = Math.random() * Math.PI * 2
     this.phaseY = Math.random() * Math.PI * 2
-    this.driftSpeed = Math.random() * 0.008 + 0.006 // 悠揚順暢的自漂速度
+    this.driftSpeed = Math.random() * 0.008 + 0.006
     this.driftRange = Math.random() * 8 + 4
 
     // 基礎粒子大小 (1.0px ~ 1.5px)
@@ -82,7 +84,6 @@ class ProximityParticle {
 
     ctx.fillStyle = `hsla(${this.hue}, 95%, ${this.lightness}%, ${this.alpha})`
     
-    // 3. 亮度稍微增加 (Glow Blur 與光芒增強)
     const glowBlur = this.alpha > 0.3 ? (this.alpha * 11) : 0
     if (glowBlur > 0) {
       ctx.shadowBlur = glowBlur
@@ -114,17 +115,15 @@ class ProximityParticle {
         proximity = 1 - (distance - mouse.coreRadius) / (mouse.glowRadius - mouse.coreRadius)
       }
 
-      // 3. 亮度與透明度稍微增加
       this.alpha = 0.04 + proximity * 0.93
       this.currentSize = this.baseSize * (1 + proximity * 1.8)
-      this.lightness = 50 + proximity * 38 // 50% -> 88%
+      this.lightness = 50 + proximity * 38
     } else {
       this.alpha += (0.04 - this.alpha) * 0.04
       this.currentSize += (this.baseSize - this.currentSize) * 0.04
       this.lightness += (50 - this.lightness) * 0.04
     }
 
-    // 1. 滑鼠中間空白縮小 (pushRadius = 75px)
     if (distance < mouse.pushRadius) {
       const wave = Math.sin((1 - distance / mouse.pushRadius) * Math.PI)
       const angle = Math.atan2(dy, dx)
@@ -148,9 +147,17 @@ const initCanvas = () => {
   const canvas = canvasRef.value
   if (!canvas) return
   const rect = canvas.getBoundingClientRect()
+  if (rect.width === 0 || rect.height === 0) return
+
   canvas.width = rect.width
   canvas.height = rect.height
   ctx = canvas.getContext('2d')
+
+  // 特性保持：若滑鼠尚未移動過，剛翻到頁面時預設在畫面中央自動發光亮起一次
+  if (mouse.x === -1000 && mouse.y === -1000) {
+    mouse.x = canvas.width / 2
+    mouse.y = canvas.height / 2
+  }
 
   particles = []
   const gap = 22
@@ -165,6 +172,7 @@ const initCanvas = () => {
   }
 }
 
+// 修正 Slidev CSS 縮放導致的滑鼠座標偏移 (Scale Correction)
 const handleMouseMove = (e) => {
   const canvas = canvasRef.value
   if (!canvas) return
@@ -175,9 +183,12 @@ const handleMouseMove = (e) => {
   mouse.y = (e.clientY - rect.top) * scaleY
 }
 
-const handleMouseLeave = () => {
-  mouse.x = -1000
-  mouse.y = -1000
+const handleMouseLeave = (e) => {
+  // 離開畫布時維持在中央發光
+  if (canvasRef.value) {
+    mouse.x = canvasRef.value.width / 2
+    mouse.y = canvasRef.value.height / 2
+  }
 }
 
 const handleTouchMove = (e) => {
@@ -210,10 +221,19 @@ onMounted(() => {
   initCanvas()
   animate()
   window.addEventListener('resize', initCanvas)
+
+  // 利用 ResizeObserver 監聽 Canvas 元素顯示與尺寸變化 (切換至該頁時自動校正 Canvas 尺寸)
+  if (window.ResizeObserver && canvasRef.value) {
+    resizeObserver = new ResizeObserver(() => {
+      initCanvas()
+    })
+    resizeObserver.observe(canvasRef.value)
+  }
 })
 
 onUnmounted(() => {
   if (animationFrameId) cancelAnimationFrame(animationFrameId)
   window.removeEventListener('resize', initCanvas)
+  if (resizeObserver) resizeObserver.disconnect()
 })
 </script>
