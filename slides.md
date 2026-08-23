@@ -46,10 +46,12 @@ transition: fade
     <li>ICU 患者家屬在患者出院或死亡後數月內，焦慮 (Anxiety) 與憂鬱 (Depression) 極為常見。</li>
     <li>創傷後壓力症候群 (Post-Traumatic Stress Disorder, PTSD) 的盛行率高達 <b>10% – 69%</b>。</li>
     <li>PTSD 核心症狀包括：
-<li>侵入性記憶/閃回 (Intrusive memories / Flashbacks)</li>
-<li>迴避行為 (Avoidance)</li>
-<li>情緒麻木 (Emotional numbing) 以及過度警覺 (Hyperarousal)</li>
-</li>
+      <ul class="list-disc pl-4 mt-1 space-y-1">
+        <li>侵入性記憶/閃回 (Intrusive memories / Flashbacks)</li>
+        <li>迴避行為 (Avoidance)</li>
+        <li>情緒麻木 (Emotional numbing) 以及過度警覺 (Hyperarousal)</li>
+      </ul>
+    </li>
   </ul>
 </div>
 <div>
