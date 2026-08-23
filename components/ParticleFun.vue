@@ -32,9 +32,9 @@ const canvasRef = ref(null)
 let ctx = null
 let animationFrameId = null
 let particles = []
-let resizeObserver = null
+let intersectionObserver = null
 
-// 滑鼠近接與大範圍光暈參數 (保持與當前完全一致)
+// 滑鼠近接與大範圍光暈參數 (保持與原汁原味完全一致)
 const mouse = {
   x: -1000,
   y: -1000,
@@ -147,13 +147,16 @@ const initCanvas = () => {
   const canvas = canvasRef.value
   if (!canvas) return
   const rect = canvas.getBoundingClientRect()
-  if (rect.width === 0 || rect.height === 0) return
 
-  canvas.width = rect.width
-  canvas.height = rect.height
+  // 解析度防護：若 rect 寬高為 0 (隱藏狀態)，退回全螢幕寬高，避免 F5 需求
+  const width = rect.width > 0 ? rect.width : window.innerWidth
+  const height = rect.height > 0 ? rect.height : window.innerHeight
+
+  canvas.width = width
+  canvas.height = height
   ctx = canvas.getContext('2d')
 
-  // 特性保持：若滑鼠尚未移動過，剛翻到頁面時預設在畫面中央自動發光亮起一次
+  // 預設亮起：若滑鼠尚未在畫面上移動過，預設點亮畫面中央
   if (mouse.x === -1000 && mouse.y === -1000) {
     mouse.x = canvas.width / 2
     mouse.y = canvas.height / 2
@@ -183,12 +186,9 @@ const handleMouseMove = (e) => {
   mouse.y = (e.clientY - rect.top) * scaleY
 }
 
-const handleMouseLeave = (e) => {
-  // 離開畫布時維持在中央發光
-  if (canvasRef.value) {
-    mouse.x = canvasRef.value.width / 2
-    mouse.y = canvasRef.value.height / 2
-  }
+const handleMouseLeave = () => {
+  mouse.x = -1000
+  mouse.y = -1000
 }
 
 const handleTouchMove = (e) => {
@@ -199,6 +199,19 @@ const handleTouchMove = (e) => {
   const scaleY = canvas.height / rect.height
   mouse.x = (e.touches[0].clientX - rect.left) * scaleX
   mouse.y = (e.touches[0].clientY - rect.top) * scaleY
+}
+
+// 全域滑鼠點亮追蹤器 (即使手放在前面幾頁動滑鼠，切換過來瞬間也能精準掌握位置)
+const trackGlobalMouse = (e) => {
+  const canvas = canvasRef.value
+  if (!canvas) return
+  const rect = canvas.getBoundingClientRect()
+  if (rect.width > 0 && rect.height > 0) {
+    const scaleX = canvas.width / rect.width
+    const scaleY = canvas.height / rect.height
+    mouse.x = (e.clientX - rect.left) * scaleX
+    mouse.y = (e.clientY - rect.top) * scaleY
+  }
 }
 
 const animate = () => {
@@ -221,19 +234,25 @@ onMounted(() => {
   initCanvas()
   animate()
   window.addEventListener('resize', initCanvas)
+  window.addEventListener('mousemove', trackGlobalMouse)
 
-  // 利用 ResizeObserver 監聽 Canvas 元素顯示與尺寸變化 (切換至該頁時自動校正 Canvas 尺寸)
-  if (window.ResizeObserver && canvasRef.value) {
-    resizeObserver = new ResizeObserver(() => {
-      initCanvas()
-    })
-    resizeObserver.observe(canvasRef.value)
+  // 核心解法：使用 IntersectionObserver 監聽「切換翻頁進入本頁」的真正可見時刻
+  if (window.IntersectionObserver && canvasRef.value) {
+    intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          initCanvas()
+        }
+      })
+    }, { threshold: 0.1 })
+    intersectionObserver.observe(canvasRef.value)
   }
 })
 
 onUnmounted(() => {
   if (animationFrameId) cancelAnimationFrame(animationFrameId)
   window.removeEventListener('resize', initCanvas)
-  if (resizeObserver) resizeObserver.disconnect()
+  window.removeEventListener('mousemove', trackGlobalMouse)
+  if (intersectionObserver) intersectionObserver.disconnect()
 })
 </script>
