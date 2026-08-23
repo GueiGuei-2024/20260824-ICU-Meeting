@@ -17,7 +17,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build Slides
-        run: npx slidev build slides.md --base /20260824-ICU-Meeting/
+        run: npx slidev build slides.md --base /
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
