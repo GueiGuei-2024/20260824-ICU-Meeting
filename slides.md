@@ -13,21 +13,23 @@ info: |
   基於文獻：Kentish-Barnes et al., Intensive Care Med (2026) https://doi.org/10.1007/s00134-026-08504-4
 ---
 
-<div class="overflow-y-auto max-h-[460px] pr-2">
-
-## 探討加護病房中家屬創傷後壓力症候群（PTSD）之多重觸發因子
-### ──  一項質性主題分析研究 (A Qualitative Thematic Study)
-
-**報告人**：R3 施朝貴
-
-
-<br>
-
-> 文獻來源 (Literature Source)：   
-> **"It was torture for him, and it was torture for us to see him like that": understanding multiple ICU-related triggers of family PTSD symptoms—a qualitative thematic study**  
-> *Nancy Kentish-Barnes, Thomas Denise, Elie Azoulay, et al.*  
-> **Intensive Care Medicine (2026) https://doi.org/10.1007/s00134-026-08504-4**  
-
+<div class="flex flex-col h-[480px] justify-between">
+  <!-- 上半部：圖片展示區 (自動縮放適應剩餘高度) -->
+  <div class="flex-1 flex items-center justify-center min-h-0 mb-3">
+    <img src="/components/Title.png" class="max-h-full max-w-full object-contain rounded shadow-md border border-gray-200" alt="Title" />
+  </div>
+  <!-- 下 1/3 部：標題與文獻資訊區 (固定最大高度，過長自動出現捲軸) -->
+  <div class="overflow-y-auto max-h-[170px] border-t border-gray-200 pt-2 pr-2 text-sm">
+    <h2 class="text-xl font-bold text-blue-900 leading-snug">探討加護病房中家屬創傷後壓力症候群（PTSD）之多重觸發因子</h2>
+    <h3 class="text-sm font-medium text-gray-600 mb-2">── 一項質性主題分析研究 (A Qualitative Thematic Study)</h3>
+    <p class="text-xs font-semibold text-gray-700 mb-2"><b>報告人</b>：R3 施朝貴</p>
+    <blockquote class="text-xs bg-gray-50 border-l-4 border-blue-500 p-2.5 text-gray-600 rounded-r">
+      <b>文獻來源 (Literature Source)：</b><br>
+      <i>"It was torture for him, and it was torture for us to see him like that": understanding multiple ICU-related triggers of family PTSD symptoms—a qualitative thematic study</i><br>
+      <b>Nancy Kentish-Barnes, Thomas Denise, Elie Azoulay, et al.</b> | 
+      <a href="https://doi.org/10.1007/s00134-026-08504-4" target="_blank" class="text-blue-600 underline">Intensive Care Medicine (2026)</a>
+    </blockquote>
+  </div>
 </div>
 
 ---
@@ -357,6 +359,23 @@ transition: slide-left
   <p class="text-xs text-gray-600 mt-1">（僅針對死亡組）撤除維生醫療的決策壓力、親眼目睹死亡瞬間的生理徵象，以及遺體帶來的感官衝擊。</p>
 </div>
 </div>
+
+---
+layout: default
+---
+
+<v-drag pos="76,16,811,565">
+  <img src="/components/figure1.png" class="rounded shadow-lg border border-gray-200" alt="Figure 1" />
+</v-drag>
+
+
+---
+layout: default
+---
+
+<v-drag pos="102,20,749,512">
+  <img src="/components/table2.png" class="rounded shadow-lg border border-gray-200" alt="Table 2" />
+</v-drag>
 
 ---
 layout: default
@@ -827,4 +846,9 @@ transition: fade
 </div>
 
 <br>
-<h2 class="text-blue-900 font-semibold mt-4 text-base">Thank you for your attention. Open for discussion.</h2>
+
+---
+layout: default
+---
+
+<ParticleFun />
