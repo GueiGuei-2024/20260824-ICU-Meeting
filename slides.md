@@ -10,7 +10,7 @@ transition: fade
 title: ICU家屬創傷後壓力症候群之多重觸發因子
 info: |
   ICU晨會讀報簡報 - 探討加護病房中家屬創傷後壓力症候群（PTSD）的觸發因子
-  基於文獻：Kentish-Barnes et al., Intensive Care Med (2026) 52:1458–1471
+  基於文獻：Kentish-Barnes et al., Intensive Care Med (2026) https://doi.org/10.1007/s00134-026-08504-4
 ---
 
 <div class="overflow-y-auto max-h-[460px] pr-2">
@@ -26,7 +26,7 @@ info: |
 > 文獻來源 (Literature Source)：   
 > **"It was torture for him, and it was torture for us to see him like that": understanding multiple ICU-related triggers of family PTSD symptoms—a qualitative thematic study**  
 > *Nancy Kentish-Barnes, Thomas Denise, Elie Azoulay, et al.*  
-> **Intensive Care Medicine (2026) 52:1458–1471**
+> **Intensive Care Medicine (2026) https://doi.org/10.1007/s00134-026-08504-4**  
 
 </div>
 
@@ -376,7 +376,7 @@ transition: slide-left
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
   <h3 class="text-blue-800 font-semibold mb-1">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-md space-y-1">
+  <ul class="space-y-1">
     <li><b>入院前的慢性心理消耗 (Chronic pre-hospitalization distress)</b>：進入 ICU 前，家屬往往已長期承受反覆照護的消耗，心理防禦已被削弱。</li>
     <li><b>不確定性的陰影 (Prognostic uncertainty)</b>：患者慢性病程的反覆波動，將家屬置於對死亡恐懼的持續警覺狀態中。</li>
   </ul>
@@ -387,20 +387,24 @@ layout: default
 transition: none
 ---
 
-# 主題一：生命軌跡與 ICU 入院 ── 急性突發衝擊
+# 主題一：生命軌跡與 ICU 入院 ── 急性突發與生活軌跡中斷
 
 <div class="my-6 border-l-4 border-red-500 pl-6 py-2 bg-red-50/50">
-  <p class="text-base text-gray-800 leading-relaxed font-serif">
-    「這一切發生得太<span v-mark.circle.red.at-0 class="px-1 font-bold">突然</span>了……我衝到加護病房，看到他情況非常糟糕。他顯得<span v-mark.circle.red.at-0 class="px-1 font-bold">無比虛弱</span>，而且突然之間，他的身上被接上了所有的儀器和管子。」
+  <p class="text-sm text-gray-800 leading-relaxed font-serif">
+    「這一切發生得太<span v-mark.circle.red.at-0 class="px-1 font-bold">突然</span>了……我衝到醫院，看到他身上被接上了所有的機器和管子。」<br>
+    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 06-0014)</span>
   </p>
-  <span class="text-xs font-semibold text-gray-500 font-mono block mt-2">── 家屬訪談記錄 (Inclusion Code: 06-0014)</span>
+  <p class="text-sm text-gray-800 leading-relaxed font-serif mt-3 border-t border-dashed border-gray-200 pt-2">
+    「住院期間，我的日常生活徹底被翻轉了。除了<span v-mark.circle.red.at-0 class="px-1 font-bold">巨大的精神壓力，還有肉體上的極度疲憊……</span>居住遠離醫院更帶來經濟與交通上的重擔。」<br>
+    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 06-0014 / 45-0018)</span>
+  </p>
 </div>
 
-<div v-click class="mt-8 border-t border-gray-200 pt-4">
+<div v-click class="mt-4 border-t border-gray-200 pt-3">
   <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-md space-y-1">
-    <li><b>病程起點的創傷印記 (Traumatic imprint of acute sudden onset)</b>：急性事件的突然爆發瞬間中斷了親屬原有的生活軌跡，使其進入「停擺狀態」。</li>
-    <li><b>技術環境的初次震驚 (Initial shock of technical environment)</b>：家屬毫無心理準備地目睹親人被管路、監護儀器所包圍，形成強烈的第一視覺衝擊。</li>
+  <ul class="space-y-2">
+    <li><b>病程起點的創傷印記 (Traumatic imprint of sudden onset)</b>：突發事件中斷了家屬原有的生活軌跡，使日常陷入停擺與恐慌。</li>
+    <li><b>生活與經濟重擔的中斷 (Disruption of daily life & financial strain)</b>：長途奔波、探視調配與經濟壓力，嚴重削弱了家屬應對心理創傷的韌性。</li>
   </ul>
 </div>
 
@@ -409,24 +413,24 @@ layout: default
 transition: none
 ---
 
-# 主題一：家屬的自責感與社會角色壓抑
+# 主題一：過往創傷再活化、自責感與角色壓抑
 
 <div class="my-6 border-l-4 border-red-500 pl-6 py-2 bg-red-50/50">
   <p class="text-sm text-gray-800 leading-relaxed font-serif">
-    「對於胸外按壓（CPR），我總是在想：『我真的把一切都做對了嗎？<span v-mark.circle.red.at-0 class="px-1 font-bold">是不是我害了他？</span>』這種想法持續了很久。」<br>
-    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 51-0017)</span>
+    「我從小就對醫院有陰影……這次我妹妹的另一半心臟病發作，重新把我帶回了 2018 年那種恐怖的感覺，過往的恐懼全部<span v-mark.circle.red.at-0 class="px-1 font-bold">浮現出來</span>。」<br>
+    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 51-0022 / 52-0017)</span>
   </p>
   <p class="text-sm text-gray-800 leading-relaxed font-serif mt-3 border-t border-dashed border-gray-200 pt-2">
-    「我沒有時間去恐慌或整理思緒……我感到害怕，但我必須保持冷靜，因為在這個家裡我需要扮演那個『<span v-mark.circle.red.at-0 class="px-1 font-bold">撐住大局的成年人</span>』。」<br>
-    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 21-0013)</span>
+    「對於 CPR 我一直在想：『是不是我害了他？』……但我沒有時間恐慌，我必須強裝冷靜，因為我要扮演那個『<span v-mark.circle.red.at-0 class="px-1 font-bold">撐住大局的成年人</span>』。」<br>
+    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 51-0017 / 21-0013)</span>
   </p>
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-base space-y-1">
-    <li><b>自責感與後悔 (Guilt & Regret)</b>：對未能及時察覺親人病情變化、或對簽署心肺復甦等介入決策反覆拷問，導致創傷深植。</li>
-    <li><b>情緒抑制 (Emotional Suppression)</b>：為維持家庭穩定強裝冷靜，情感無法在 ICU 期間獲得宣洩，埋下日後遲發性 PTSD 的種子。</li>
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
+    <li><b>過往創傷的再活化 (Reactivation of past personal/family trauma)</b>：親人入住 ICU 會喚醒家屬過去喪親或重病住院的壓抑記憶，使易感性加倍。</li>
+    <li><b>自責感與情緒壓抑 (Guilt & Emotional Suppression)</b>：反覆拷問自己是否忽視前兆、同時為維持家庭運作而強行壓抑恐懼，埋下遲發性 PTSD 的種子。</li>
   </ul>
 </div>
 
@@ -443,14 +447,14 @@ transition: slide-left
     <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 60-0014)</span>
   </p>
   <p class="text-sm text-gray-800 leading-relaxed font-serif mt-3 border-t border-dashed border-gray-200 pt-2">
-    「第一晚我姊姊不讓我進去看他，她說：『我不建議你去看他，他身上接滿了管子，而且到處都是血。』……那情景真的讓我<span v-mark.circle.red.at-0 class="px-1 font-bold">無比震驚</span>。」<br>
+    「第一晚我姊姊不讓我進去看他，她說：『我不建議你去看他，他身上接滿了管子，而且到處都是血。』……那情景真的讓我<br><span v-mark.circle.red.at-0 class="px-1 font-bold">無比震驚</span>。」<br>
     <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 60-0004)</span>
   </p>
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-xs space-y-1">
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
     <li><b>技術環境的「暴力感」 (Violence of the technical environment)</b>：插管、約束帶、血跡等高度生理侵略性的環境，對家屬是嚴重的感官過載與創傷記憶。</li>
     <li><b>限制性看視的震驚 (Restricted visitation shock)</b>：對病床旁環境缺乏預備，首日親眼目睹高度醫療化的親人，易誘發強烈的恐怖幻想。</li>
   </ul>
@@ -475,8 +479,8 @@ transition: none
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-xs space-y-1">
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
     <li><b>親人身體的「異化」與尊嚴剝奪 (Physical alteration & alienation)</b>：淤青、水腫、赤裸等狀態，破壞了家屬記憶中親人的尊嚴形象。</li>
     <li><b>昏迷狀態下的「投射痛苦」 (Projected suffering)</b>：目睹昏迷患者面部抽搐，家屬常會代入並投射其痛苦，加劇其替代性受苦（Vicarious suffering）。</li>
   </ul>
@@ -498,7 +502,7 @@ transition: none
 
 <div v-click class="mt-8 border-t border-gray-200 pt-4">
   <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-sm space-y-1">
+  <ul class="space-y-2">
     <li><b>照顧者角色的剝奪 (Role Deprivation of caregivers)</b>：醫療團隊完全接管患者，若醫護言談中缺乏敏感度，會使家屬感到無用與徹底邊緣化。</li>
     <li><b>關係親密性的切斷 (Disruption of intimacy)</b>：親人身體異化（術後腫脹、多管留置）加上儀器阻隔，使原有的家庭親密感產生巨大撕裂。</li>
   </ul>
@@ -523,8 +527,8 @@ transition: none
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-xs space-y-1">
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
     <li><b>替代性受苦 (Vicarious Suffering)</b>：家屬不僅為親人受苦，也因目睹相鄰病床的緊急搶救或拔管而感到恐慌。</li>
     <li><b>情緒傳染與悲傷共振 (Emotional Contagion in waiting rooms)</b>：候診室是一個悲傷與絕望被放大的封閉空間，家屬會在此被動吸收他人的不幸。</li>
   </ul>
@@ -539,18 +543,18 @@ transition: none
 
 <div class="my-6 border-l-4 border-red-500 pl-6 py-2 bg-red-50/50">
   <p class="text-sm text-gray-800 leading-relaxed font-serif">
-    「第一次家族會議簡直像被重鎚擊中。醫生冷冰冰地說：『即使她醒來，也需要換心。』這話太殘忍了，雖然很清楚，但真的讓我<span v-mark.circle.red.at-0 class="px-1 font-bold">大受打擊</span>。」<br>
+    「第一次家族會議簡直像被重鎚擊中。醫生冷冰冰地說：『即使她醒來，也需要換心。』這話太殘忍了，雖然很清楚，但真的讓我<br><span v-mark.circle.red.at-0 class="px-1 font-bold">大受打擊</span>。」<br>
     <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 51-0017)</span>
   </p>
   <p class="text-sm text-gray-800 leading-relaxed font-serif mt-3 border-t border-dashed border-gray-200 pt-2">
-    「要在加護病房見到醫生太難了。我下午 1 點就到了，一直等到晚上 7 點，醫生還是沒來。這 6 個小時的等待讓我覺得自己<span v-mark.circle.red.at-0 class="px-1 font-bold">無足輕重</span>……」<br>
+    「要在加護病房見到醫生太難了。我下午 1 點就到了，一直等到晚上 7 點，醫生還是沒來。這 6 個小時的等待讓我覺得自己<br><span v-mark.circle.red.at-0 class="px-1 font-bold">無足輕重……</span>」<br>
     <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 53-0001)</span>
   </p>
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-xs space-y-1">
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
     <li><b>溝通中的同理心缺失 (Lack of empathy in communication)</b>：缺乏鋪墊的、冷若冰霜的醫學事實宣告，常演化為家屬心理的二次重創。</li>
     <li><b>無效等待與無價值感 (Ineffective waiting & worthlessness)</b>：醫療團隊長時間失約，會讓家屬產生被忽視的孤立感。</li>
   </ul>
@@ -564,15 +568,19 @@ transition: none
 # 主題二：希望的雲霄飛車與患者譫妄衝擊
 
 <div class="my-6 border-l-4 border-red-500 pl-6 py-2 bg-red-50/50">
-  <p class="text-base text-gray-800 leading-relaxed font-serif">
-    「當她醒來時，情況非常糟糕，她完全不認得我們，還一直在辱罵我們……她整個人都變了。看到她那樣，我們甚至在想：『如果她醒來後永遠是這種植物人或者<span v-mark.circle.red.at-0 class="px-1 font-bold">瘋癲狀態</span>，那該怎麼辦？』」
+  <p class="text-sm text-gray-800 leading-relaxed font-serif">
+    「對於甦醒我<span v-mark.circle.red.at-0 class="px-1 font-bold">非常焦慮</span>：『帶著管子醒來會是什麼狀態？如果最後只是變成植物人，該怎麼辦？』」<br>
+    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 12-0007)</span>
   </p>
-  <span class="text-xs font-semibold text-gray-500 font-mono block mt-2">── 家屬訪談記錄 (Inclusion Code: 51-0022 / 12-0007)</span>
+  <p class="text-sm text-gray-800 leading-relaxed font-serif mt-3 border-t border-dashed border-gray-200 pt-2">
+    「當他醒來時完全不認得我們，還一直辱罵我們……他根本不知道自己在哪裡，整個人都變了。」<br>
+    <span class="text-xs font-semibold text-gray-500 font-mono block mt-1">── 家屬訪談記錄 (Inclusion Code: 51-0022 / 57-0007)</span>
+  </p>
 </div>
 
-<div v-click class="mt-8 border-t border-gray-200 pt-4">
+<div v-click class="mt-4 border-t border-gray-200 pt-3">
   <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-sm space-y-1">
+  <ul class="space-y-2">
     <li><b>甦醒期譫妄衝擊 (Awakening Delirium Impact)</b>：家屬通常將「病人清醒」等同於康復。然而伴隨的甦醒期譫妄、精神運動性興奮或妄想，往往打破這一期待。</li>
     <li><b>人格劇變的恐懼 (Fear of permanent cognitive decline)</b>：目睹親人表現怪異或有攻擊性，引發家屬對其預後生活與精神完整性的極度焦慮。</li>
   </ul>
@@ -587,7 +595,7 @@ transition: fade
 
 儘管 ICU 環境充滿壓力，但特定的臨床實踐與護理細節能發揮顯著的創傷保護作用。
 
-<div class="grid grid-cols-2 gap-8 mt-6 text-sm">
+<div class="grid grid-cols-2 gap-8 mt-6 text-md">
 <div>
   <h3 class="font-semibold text-blue-800">1. 環境的「馴服」與個人化 (Environmental personalization)</h3>
   <ul class="space-y-2 mt-2">
@@ -623,10 +631,10 @@ transition: slide-left
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-xs space-y-1">
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
     <li><b>決策界線與責任釐清 (Decisional responsibility in WWLST)</b>：強調 WWLST 是臨床醫學團隊基於客觀情況做出的醫學決定，能有效消除家屬的道德創傷 (Moral injury)。</li>
-    <li><b>臨終鎮靜與安樂死的混淆 (Palliative sedation vs. Euthanasia)</b>：不良溝通易使家屬將控制不適的鎮靜劑（Sedatives）解讀為「故意安樂死」或過量殺害，形成沉重的長期陰影。</li>
+    <li><b>臨終鎮靜與安樂死的混淆 (Palliative sedation vs. Euthanasia)</b>：模糊溝通易使家屬將控制不適的緩和鎮靜解讀為「故意安樂死」或過量給藥，引發強烈不信任與長遠創傷。</li>
   </ul>
 </div>
 
@@ -646,7 +654,7 @@ transition: none
 
 <div v-click class="mt-8 border-t border-gray-200 pt-4">
   <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-sm space-y-1">
+  <ul class="space-y-2">
     <li><b>時間控制與心理預備 (EOL Timing Control)</b>：在明確得知親人將臨終後，給予家屬不受干擾、充裕的陪伴空間，有助於進行「預期性哀傷 (Anticipatory grief)」的整合。</li>
     <li><b>非言語的人道體貼 (Humane end-of-life care)</b>：醫護團隊對臨終環境技術印記的最小化（如深夜不開大燈、腳步放輕），能為親屬留下溫暖的「臨終敘事」。</li>
   </ul>
@@ -668,7 +676,7 @@ transition: none
 
 <div v-click class="mt-8 border-t border-gray-200 pt-4">
   <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-sm space-y-1">
+  <ul class="space-y-2">
     <li><b>技術去人性化的視覺折磨 (Visual trauma of medical devices)</b>：盯著監護儀心跳波形至「平線（Flatline）」的過程，極易轉化為反覆閃回（Flashback）的夢魘。</li>
     <li><b>醫護團隊的常規冷漠 (De-sensitization of clinical routine)</b>：將生命徵象監測儀當作常規不予關閉，反映出團隊對臨終情境下家屬視覺衝擊的阻隔失效。</li>
   </ul>
@@ -693,8 +701,8 @@ transition: none
 </div>
 
 <div v-click class="mt-4 border-t border-gray-200 pt-3">
-  <h3 class="text-blue-800 font-semibold mb-1 text-sm">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
-  <ul class="text-xs space-y-1">
+  <h3 class="text-blue-800 font-semibold mb-2">💡 臨床概念與主題分析 (Clinical Concepts)</h3>
+  <ul class="space-y-2">
     <li><b>臨終時長的不確定性 (Temporal stress of dying)</b>：不規則的瀕死呼吸（如潮式呼吸）易引發家屬的情緒撕扯（既不捨又希望患者早日解脫）。</li>
     <li><b>死後遺體的物理感官衝擊 (Post-mortem Sensorial Shock)</b>：冰冷、僵硬、氣味等感官細節，對於首次接觸死亡的家屬，會留下深沉的病理性記憶。</li>
   </ul>
@@ -712,24 +720,24 @@ transition: slide-up
 <div class="grid grid-cols-2 gap-8 mt-6">
 <div>
   <h3 class="font-semibold text-blue-800 text-sm">1. 創傷形成的動態軌跡 (Dynamic Trajectory of Trauma)</h3>
-  <ul class="text-xs space-y-2 mt-2">
+  <ul class="text-md space-y-2 mt-2">
     <li><b>背景易感期 (Pre-ICU Vulnerability)</b>：前期的照顧疲勞、個人創傷歷史。</li>
     <li><b>急性衝擊期 (Acute Shock at Admission)</b>：突然的入院、對技術環境的恐懼、自責。</li>
     <li><b>環境博弈期 (Navigating the ICU Environment)</b>：關係被剝奪、替代性受苦、甦醒譫妄。</li>
     <li><b>臨終決策期 (End-of-life Decisions)</b>：決策拉扯、生理臨終視覺與生理衝擊。</li>
   </ul>
-  <p class="text-xs font-semibold text-red-600 mt-4">👉 創傷是上述壓力源沿時間軸不斷疊加 (Additive Effect) 的結果。</p>
+  <p class="text-sm font-semibold text-red-600 mt-4">👉 創傷是上述壓力源沿時間軸不斷疊加 (Additive Effect) 的結果。</p>
 </div>
 <div class="border border-blue-100 p-4 rounded bg-blue-50">
-  <h4 class="font-semibold text-blue-900 text-xs mb-2">💡 ICU 的雙重隱喻 (The ICU Ambivalence)</h4>
-  <p class="text-xs text-gray-755">
+  <h3 class="font-semibold text-blue-900 text-sm mb-2">💡 ICU 的雙重隱喻 (The ICU Ambivalence)</h4>
+  <p class="text-md text-gray-750">
     加護病房對家屬而言扮演了<b>雙重角色</b>：
   </p>
-  <ul class="text-xs text-gray-650 mt-1">
+  <ul class="text-md text-gray-700 mt-1 space-y-1">
     <li><b>作為創傷源 (Source of Trauma)</b>：高度技術化、充滿噪聲、見證痛苦與死亡的「修羅場」。</li>
     <li><b>作為避風港 (Place of Reassurance)</b>：擁有強大醫療資源、能快速應對變化、提供安全感與人性關懷的場所。</li>
   </ul>
-  <p class="text-xs text-gray-500 mt-2">
+  <p class="text-md text-gray-600 mt-2">
     臨床實踐的目標，正是<b>將 ICU 從單純的創傷源，最大程度地轉化為提供支持的避風港</b>。
   </p>
 </div>
@@ -744,10 +752,10 @@ transition: fade
 
 作為 ICU 專門醫師，我們應當如何優化日常臨床工作以降低家屬的 PTSD 風險？
 
-<div class="grid grid-cols-2 gap-8 mt-4 text-xs">
+<div class="overflow-y-auto  max-h-[350px]  grid grid-cols-2 gap-8 mt-4 text-md">
 <div>
   <h3 class="font-semibold text-blue-800">1. 改善日常溝通與角色重建</h3>
-  <ul class="space-y-2 mt-2">
+  <ul class="space-y-2 mt-2 text-sm">
     <li><b>主動且一致的資訊共享 (Consistent information sharing)</b>：避免不同班次醫護說法不一導致家屬無所適從。</li>
     <li><b>引導家屬參與輕度護理 (Re-establishing caregiver roles)</b>：如幫親人擦臉、抹潤唇膏、按摩雙手。用具體行動重建其「照護者角色」，消弭被排斥感。</li>
     <li><b>預防性解釋甦醒期譫妄 (Anticipatory education on delirium)</b>：在減藥或拔管前，明確告知家屬「患者可能會出現躁動、胡言亂語或短暫的人格改變，這是藥物代謝的正常現象，不代表大腦永久受損」。</li>
@@ -755,8 +763,8 @@ transition: fade
 </div>
 <div>
   <h3 class="font-semibold text-blue-800">2. 優化臨終與死亡處置流程</h3>
-  <ul class="space-y-2 mt-2">
-    <li><b>界定決策責任 (Clarifying decisional responsibility)</b>：向家屬強調 WWLST 是「醫療團隊做出的醫學決定」，家屬的任務是幫助我們理解患者的意願，而非按下「停止鍵」。</li>
+  <ul class="space-y-2 mt-2  text-sm">
+    <li><b>界定決策責任 (Clarifying decisional responsibility)</b>：向家屬強調 WWLST（Withholding and Withdrawal of Life-Sustaining Treatment） 是「醫療團隊做出的醫學決定」，家屬的任務是幫助我們理解患者的意願，而非按下「停止鍵」。</li>
     <li><b>「視覺與聽覺的去技術化」 (Visual & Auditory De-technicalization)</b>：在撤除維生設備時，<b>務必關閉病房內的所有儀器螢幕與報警音</b>。</li>
     <li><b>瀕死徵象的預先衛教 (Anticipatory education on dying signs)</b>：向家屬預告可能出現的喘息（Gasping）或肌肉反射，說明這通常是無意識的生理現象，患者此時已處於深度鎮靜，並無痛苦。</li>
   </ul>
@@ -791,8 +799,8 @@ transition: fade
 </div>
 </div>
 
-<div class="bg-gray-50 border-l-4 border-yellow-500 p-3 mt-4 text-xs text-gray-700">
-  <b>💡 東亞文化背景下的反思 (Cross-Cultural Reflection)</b>：在我們的臨床環境中，家屬對於 WWLST 的「孝道壓力」與決策內疚感可能更為沉重。醫療團隊承擔決策責任的宣示（"It is our medical decision"）在我們的文化脈絡下可能更具保護作用。
+<div class="bg-gray-50 border-l-4 border-yellow-500 p-3 mt-4 text-gray-700">
+  <b>💡 東亞文化背景下的反思 (Cross-Cultural Reflection)</b>：在我們的臨床環境中，家屬對於 WWLST「維生醫療的撤除與不予施行」（Withholding and Withdrawal of Life-Sustaining Treatment） 的「孝道壓力」與決策內疚感可能更為沉重。醫療團隊承擔決策責任的宣示（"It is our medical decision"）在我們的文化脈絡下可能更具保護作用。
 </div>
 
 ---
