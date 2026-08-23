@@ -731,7 +731,7 @@ transition: slide-up
   <p class="text-sm font-semibold text-red-600 mt-4">👉 創傷是上述壓力源沿時間軸不斷疊加 (Additive Effect) 的結果。</p>
 </div>
 <div class="border border-blue-100 p-4 rounded bg-blue-50">
-  <h3 class="font-semibold text-blue-900 text-sm mb-2">💡 ICU 的雙重隱喻 (The ICU Ambivalence)</h4>
+  <h3 class="font-semibold text-blue-900 text-sm mb-2">💡 ICU 的雙重隱喻 (The ICU Ambivalence)</h3>
   <p class="text-md text-gray-750">
     加護病房對家屬而言扮演了<b>雙重角色</b>：
   </p>
