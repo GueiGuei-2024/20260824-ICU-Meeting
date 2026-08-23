@@ -129,7 +129,7 @@ transition: fade
 
 以下為納入研究的 17 位家屬之完整臨床特徵表：
 
-<div class="overflow-y-auto max-h-[350px] pr-2 text-[10px] border border-gray-200 rounded mt-2">
+<div class="overflow-y-auto max-h-[350px] pr-2 text-[14px] border border-gray-200 rounded mt-2">
   <table class="w-full border-collapse text-left">
     <thead>
       <tr class="bg-gray-100 sticky top-0 z-10 shadow-sm">
@@ -365,9 +365,8 @@ layout: default
 ---
 
 <v-drag pos="76,16,811,565">
-  <img src="/components/figure1.png" class="rounded shadow-lg border border-gray-200" alt="Figure 1" />
+  <img src="/components/Figure1.png" class="rounded shadow-lg border border-gray-200" alt="Figure 1" />
 </v-drag>
-
 
 ---
 layout: default
